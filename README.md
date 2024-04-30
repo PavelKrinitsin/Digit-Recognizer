@@ -1,28 +1,23 @@
 # *Digit Recognizer*
 **Educational task on building a classifier for handwritten digit images based on the MNIST dataset**
 <p align="center">
-    <img src="https://github.com/PavelKrinitsin/Classification-of-bearings/blob/main/1.jpg" width="300">
+    <img src="https://github.com/PavelKrinitsin/Digit-Recognizer/blob/main/header.png" width="300">
 </p>
 
 ## Description
-Целью данной работы является исследование способа решения проблемы снижения срока службы подшипников качения, установленных на промышленном оборудовании, в результате их некачественной смазки в процессе эксплуатации. 
-В работе рассматривается метод классификации состояний подшипников в зависимости от их диагностических параметров: различных показателей вибрации и температуры. Классификация осуществляется методами классического машинного обучения: методами KNN, RandomForestClassifier, SVM с целью выявления наилучших показателей точности модели. В процессе проведения исследования выполнен анализ влияния каждого из диагностических параметров – признаков на показатели работы алгоритмов модели классификации. Полученная модель позволяет качественно, с 98% точностью, производить оценку состояния смазки подшипников качения и выдавать рекомендации по проведению своевременного сервисного обслуживания оборудования. 
+Цель данной работы - построение классификатора изображений рукописного ввода на базе библиотеки MNIST. Классификатор построен на признаках, полученных в результате предобработки изображений. Работа выполнена в рамках выполнения задания на https://www.kaggle.com/c/digit-recognizer. 
+В качестве модели классификатора выбрана модель KNN. Подбор гиперпараметров осуществлен с помощью GridSearch.
 
 
-The purpose of this work is to explore a method for solving the problem of reduced service life of rolling bearings installed on industrial equipment due to their poor lubrication during operation. 
-This work examines a method for classifying the conditions of bearings depending on their diagnostic parameters: various indicators of vibration and temperature. Classification is carried out using traditional machine learning methods: KNN, RandomForestClassifier, SVM methods with the aim of identifying the best model accuracy indicators. During the research, an analysis of the impact of each diagnostic parameter – features on the performance indicators of the classification model algorithms was performed. The obtained model allows for a quality, 98% accuracy, assessment of the condition of rolling bearing lubrication and provides recommendations for timely maintenance of equipment.
-
+The aim of this work is to build a classifier for handwritten digit images based on the MNIST library. The classifier is built on features obtained from image preprocessing. The work was done as part of a task on https://www.kaggle.com/c/digit-recognizer.
+The KNN model was chosen as the classifier model. Hyperparameter tuning was done using GridSearch.
 ___
 
 ## Results
-Все три модели показали удовлетворительный результат обучения и могут быть применены в качестве практической модели классификации подшипников по состоянию их смазки:
-1.  Модель RandomForestClassifier показала наиболее высокие результаты классификации как на тестовых, так и на тренировочных данных. На тестовых данных ее ошибка не превышает 2%;
-2.  Наиболее значимым признаком для предсказания целевой переменной "Bearing State" у всех трех моделей оказался признак V-rms - показатель виброскорости (м/с).
+Метрика оцененана тестовой выборке в рамках контеста Digit Recognizer на Kaggle. Accuracy: 0,620.
 
 
-All three models showed satisfactory training results and can be applied as a practical model for classifying bearings based on the condition of their lubrication:
-1. The RandomForestClassifier model demonstrated the highest classification results on both test and training data, with an error rate on the test data not exceeding 2%.
-2. The most significant feature for predicting the target variable "Bearing State" in all three models was the V-rms feature - a measure of vibration velocity (m/s).
+The metric was evaluated on the test set within the Digit Recognizer contest on Kaggle. Accuracy: 0.620.
 
 
 ___
